@@ -1,35 +1,31 @@
-# ID   FPS_W   mAP(%)   FPS    W     Nivel  Etiqueta
+# ID      FPS_W   mAP(%)   FPS     W       Nivel  Etiqueta
 # ---------------------------------------------------------------------------------------------
-# Nivel 0: Sin Optimizar (CPU / GPU FP32)
-  N0_1   0.06    67.60   0.23   3.8   0      "Nakahara CPU ARM"
-  N0_2   1.19    57.10   2.50   2.1   0      "Ryzen 5 LP"
-  N0_3   1.51    57.10   8.00   5.3   0      "Ryzen 5 MT"
-  N0_4   1.07    57.10   8.00   7.5   0      "Jetson TX2 Base"
-  N0_5   1.11    57.10  15.00  13.5   0      "RTX 3050 Base"
-  N0_6   1.17    57.10 207.00 177.0   0      "Titan X Tiny"
-  N0_7   0.36    76.80  67.00 185.0   0      "Titan X YOLOv2"
-  N0_8   0.76    77.20   3.80   5.0   0      "Snapdragon 865"
-# Nivel 1: Compilador GPU Embebida / Móvil
-  N1_1   2.81    57.00  29.50  10.5   1      "Jetson TX2 TRT"
-  N1_2   2.56    68.40  25.60  10.0   1      "Mini-YOLOv4 Nano"
-  N1_3   3.82    71.50  19.10   5.0   1      "YOLObile Mobile"
-# Nivel 2: FPGA Optimización Estándar
-  N2_1   8.06    50.10  25.00   3.1   2      "Tinier-YOLO QNN"
-  N2_2  23.57    51.68  66.00   2.8   2      "BiDet ZC706"
-  N2_3  27.27    57.10  30.00   1.1   2      "Hozhabr KV260"
-# Nivel 3: FPGA Co-Diseño Profundo (Frente de Pareto)
-  N3_1   9.06    62.50  65.20   7.2   3      "Winograd ZCU102"
-  N3_2  41.90    64.80  79.80   1.9   3      "AHCO-YOLO-T"
-  N3_3   9.07    67.60  40.81   4.5   3      "Nakahara ZCU102"
-  N3_4  17.55    68.50  38.60   2.2   3      "SkyNet DVFS"
-  N3_5  11.50    70.40  57.50   5.0   3      "Auto-Accel SSDLite"
-  N3_6   2.90    71.50  33.34  11.5   3      "Liew YOLOv4"
-  N3_7   3.44    73.40  61.90  18.0   3      "Wang Arria 10"
-  N3_8   3.46    76.80  71.00  20.5   3      "Xu YOLOv2 Full"
+# Nivel 0: GPU Sin Optimizar (FP32 - Tabla 2, normalizado por TDP nominal)
+  GPU_1    0.02    69.90    5.00   235.0   0      "Faster R-CNN (K40)"
+  GPU_2    0.18    74.30   46.00   250.0   0      "SSD (Titan X)"
+  GPU_3    0.27    76.80   67.00   250.0   0      "YOLOv2 (Titan X)"
+  GPU_4    0.38    41.20   96.00   250.0   0      "YOLOv4 (V100)"
+  GPU_5    0.83    57.10  207.00   250.0   0      "Tiny-YOLOv2 (Titan X)"
+  GPU_6    1.54    53.10  108.00    70.0   0      "RT-DETR (T4)"
 
-# Coordenadas exactas para la curva de la Frontera de Pareto (Nivel 3 óptimo)
-# mAP   FPS_W
-# 64.80  41.90
-# 68.50  17.55
-# 70.40  11.50
-# 76.80   3.46
+# Nivel 1: FPGA Optimización Básica / Cuantificación Estándar (Tablas 9-10)
+  FPGA_1   0.92    73.60   25.00    27.2   1      "Li et al. [74]"
+  FPGA_2   1.44    49.70   22.00    15.3   1      "Chang et al. [82]"
+  FPGA_3   3.55    56.80   33.14     9.34  1      "Cai et al. [68]"
+  FPGA_4   8.37    31.00   32.40     3.87  1      "Pestana et al. [85]"
+
+# Nivel 2: FPGA Optimización Intermedia - Compresión + Memoria/Pipeline (Tablas 9-10)
+  FPGA_5   2.78    34.10   30.00    10.79  2      "Hosseiny et al. [92]"
+  FPGA_6   4.26    77.04   43.70    10.25  2      "J. Zhang et al. [48]"
+  FPGA_7   6.55    20.50   64.80     9.90  2      "Fan et al. [47]"
+  FPGA_8   7.65    51.38   66.56     8.70  2      "Nguyen et al. [15]"
+  FPGA_9   8.42    58.10   65.70     7.80  2      "D. Zhang et al. [86]"
+  FPGA_10 14.24    76.20   34.18     2.40  2      "Suh et al. [69]"
+
+# Nivel 3: FPGA Co-Diseño Profundo Algoritmo-Hardware (Tablas 9-10)
+  FPGA_11  2.79    74.45   72.50    26.00  3      "Wang et al. [73]"
+  FPGA_12  4.80    55.10   26.90     5.60  3      "Huang et al. [184]"
+  FPGA_13  5.79    22.80  469.00    81.00  3      "Anupreetham et al. [67]"
+  FPGA_14 16.55    78.60   84.40     5.10  3      "S. Kim et al. [46]"
+  FPGA_15 20.83    82.60   43.95     2.11  3      "K. Kim et al. [182]"
+  FPGA_16 34.89    81.19   76.75     2.20  3      "M. Kim et al. [84]"
