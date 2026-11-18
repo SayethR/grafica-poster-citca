@@ -1,0 +1,35 @@
+# ID   FPS_W   mAP(%)   FPS    W     Nivel  Etiqueta
+# ---------------------------------------------------------------------------------------------
+# Nivel 0: Sin Optimizar (CPU / GPU FP32)
+  N0_1   0.06    67.60   0.23   3.8   0      "Nakahara CPU ARM"
+  N0_2   1.19    57.10   2.50   2.1   0      "Ryzen 5 LP"
+  N0_3   1.51    57.10   8.00   5.3   0      "Ryzen 5 MT"
+  N0_4   1.07    57.10   8.00   7.5   0      "Jetson TX2 Base"
+  N0_5   1.11    57.10  15.00  13.5   0      "RTX 3050 Base"
+  N0_6   1.17    57.10 207.00 177.0   0      "Titan X Tiny"
+  N0_7   0.36    76.80  67.00 185.0   0      "Titan X YOLOv2"
+  N0_8   0.76    77.20   3.80   5.0   0      "Snapdragon 865"
+# Nivel 1: Compilador GPU Embebida / Móvil
+  N1_1   2.81    57.00  29.50  10.5   1      "Jetson TX2 TRT"
+  N1_2   2.56    68.40  25.60  10.0   1      "Mini-YOLOv4 Nano"
+  N1_3   3.82    71.50  19.10   5.0   1      "YOLObile Mobile"
+# Nivel 2: FPGA Optimización Estándar
+  N2_1   8.06    50.10  25.00   3.1   2      "Tinier-YOLO QNN"
+  N2_2  23.57    51.68  66.00   2.8   2      "BiDet ZC706"
+  N2_3  27.27    57.10  30.00   1.1   2      "Hozhabr KV260"
+# Nivel 3: FPGA Co-Diseño Profundo (Frente de Pareto)
+  N3_1   9.06    62.50  65.20   7.2   3      "Winograd ZCU102"
+  N3_2  41.90    64.80  79.80   1.9   3      "AHCO-YOLO-T"
+  N3_3   9.07    67.60  40.81   4.5   3      "Nakahara ZCU102"
+  N3_4  17.55    68.50  38.60   2.2   3      "SkyNet DVFS"
+  N3_5  11.50    70.40  57.50   5.0   3      "Auto-Accel SSDLite"
+  N3_6   2.90    71.50  33.34  11.5   3      "Liew YOLOv4"
+  N3_7   3.44    73.40  61.90  18.0   3      "Wang Arria 10"
+  N3_8   3.46    76.80  71.00  20.5   3      "Xu YOLOv2 Full"
+
+# Coordenadas exactas para la curva de la Frontera de Pareto (Nivel 3 óptimo)
+# mAP   FPS_W
+# 64.80  41.90
+# 68.50  17.55
+# 70.40  11.50
+# 76.80   3.46
