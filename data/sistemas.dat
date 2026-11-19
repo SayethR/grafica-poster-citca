@@ -1,0 +1,31 @@
+# ID      FPS_W   mAP(%)   FPS     W       Nivel  Etiqueta (igual que en la gráfica y en la tabla del README)
+# ---------------------------------------------------------------------------------------------
+# Nivel 0: GPU Sin Optimizar (FP32 - Tabla 2, normalizado por TDP nominal)
+  GPU_1    0.02    69.90    5.00   235.0   0      "Faster R-CNN [2]"
+  GPU_2    0.18    74.30   46.00   250.0   0      "SSD [3]"
+  GPU_3    0.27    76.80   67.00   250.0   0      "YOLOv2 [4]"
+  GPU_4    0.38    41.20   96.00   250.0   0      "YOLOv4 [5]"
+  GPU_5    0.83    57.10  207.00   250.0   0      "Tiny-YOLOv2 [4]"
+  GPU_6    1.54    53.10  108.00    70.0   0      "RT-DETR [6]"
+
+# Nivel 1: FPGA Optimización Básica / Cuantificación Estándar (Tablas 9-10)
+  FPGA_1   0.92    73.60   25.00    27.2   1      "Li [7]"
+  FPGA_2   1.44    49.70   22.00    15.3   1      "Chang [8]"
+  FPGA_3   3.55    56.80   33.14     9.34  1      "Cai [9]"
+  FPGA_4   8.37    31.00   32.40     3.87  1      "Pestana [10]"
+
+# Nivel 2: FPGA Optimización Intermedia - Compresión + Memoria/Pipeline (Tablas 9-10)
+  FPGA_5   2.78    34.10   30.00    10.79  2      "Hosseiny [11]"
+  FPGA_6   4.26    77.04   43.70    10.25  2      "J. Zhang [12]"
+  FPGA_7   6.55    20.50   64.80     9.90  2      "Fan [13]"
+  FPGA_8   7.65    51.38   66.56     8.70  2      "Nguyen [14]"
+  FPGA_9   8.42    58.10   65.70     7.80  2      "D. Zhang [15]"
+  FPGA_10 14.24    76.20   34.18     2.40  2      "Suh [16]"
+
+# Nivel 3: FPGA Co-Diseño Profundo Algoritmo-Hardware (Tablas 9-10)
+  FPGA_11  2.79    74.45   72.50    26.00  3      "Wang [17]"
+  FPGA_12  4.80    55.10   26.90     5.60  3      "Huang [18]"
+  FPGA_13  5.79    22.80  469.00    81.00  3      "Anupreetham [19]"
+  FPGA_14 16.55    78.60   84.40     5.10  3      "S. Kim [20]"
+  FPGA_15 20.83    82.60   43.95     2.11  3      "K. Kim [21]"
+  FPGA_16 34.89    81.19   76.75     2.20  3      "M. Kim [22]"
